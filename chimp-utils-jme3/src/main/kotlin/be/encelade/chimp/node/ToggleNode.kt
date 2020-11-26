@@ -2,6 +2,7 @@ package be.encelade.chimp.node
 
 import be.encelade.chimp.tpf.TpfAccumulable
 import be.encelade.chimp.tpf.TpfAccumulator
+import com.jme3.scene.Node
 
 /**
  * [com.jme3.scene.Node] that can be toggled (show/hide) and refreshed on regular basis (e.g. every 2 sec. if refreshFrequency = .5f)
@@ -11,7 +12,7 @@ abstract class ToggleNode(private val nodeName: String,
                           private val afterShowed: () -> Unit = {},
                           private val afterClosed: () -> Unit = {},
                           refreshFrequency: Float = DEFAULT_REFRESH_RATE) :
-        NodeBased(nodeName), TpfAccumulable {
+        Node(nodeName), TpfAccumulable {
 
     private var isVisible = false
 
