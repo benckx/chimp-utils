@@ -10,3 +10,21 @@ while working on my game *Everybody Loves Bricks*:
 * https://benckx.itch.io/elb
 * https://www.youtube.com/watch?v=Tm6QexsctfQ
 * https://www.youtube.com/watch?v=qzs6Z_jM6mE
+
+# Import with Gradle
+
+* Configure jitpack in your repositories 
+
+```groovy
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+
+    // no required, but helps for consistency
+    def chimpUtilsVersion = "1.1"
+    
+    dependencies {
+        compile "com.github.benckx.chimp-utils:chimp-utils-basics:$chimpUtilsVersion"
+        compile "com.github.benckx.chimp-utils:chimp-utils-jme3:$chimpUtilsVersion"
+    }
+```
