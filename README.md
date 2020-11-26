@@ -13,8 +13,6 @@ while working on my game *Everybody Loves Bricks*:
 
 # Import with Gradle
 
-* Configure jitpack in your repositories 
-
 ```groovy
     repositories {
         maven { url "https://jitpack.io" }
