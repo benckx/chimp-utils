@@ -97,8 +97,8 @@ based on the accumulated tpf being received from the engine.
 It is designed for periodic actions that don't need to run as often as tpf updates (with can easily be in the 200 Hz range), 
 in order to create timers-liked behavior within the main engine thread.
 
-It can be used for example to trigger a refresh on the UI, update game state or implement cycle-based game entities 
-(e.g. a machine that outputs a product every 1 sec. in a Factorio-like game). 
+It can be used for example to trigger a refresh of the UI, update scene based on game state changes
+or implement cycle-based game entities (e.g. a machine that outputs a product every 1 sec. in a Factorio-like game). 
 
 ### Example: Run something every 2 seconds:
 
