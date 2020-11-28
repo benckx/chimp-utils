@@ -41,6 +41,7 @@ Create a `ColorRGBA` in hexadecimal:
 ## Material
 
 Create an unshaded material:
+
 ```kotlin
     override fun simpleInitApp() {
         // do this at init 
@@ -54,6 +55,43 @@ Create an unshaded material:
         floor.material = floorMat
     }
 ```
+
+## Tpf Accumulator
+
+The Tpf Accumulator is a mechanism to run actions (i.e. callback) periodically at a certain frequency (e.g. 2 Hz), 
+based on the accumulated tpf being received from the engine.
+It is designed for periodic actions that don't need to run as often as tpf updates (with can easily be in the 200 Hz range), 
+in order to create periodic action within the main engine thread.
+
+For example, to run an action every 2 sec.:
+
+```kotlin
+class DemoSimpleApp : SimpleApplication() {
+
+    private val tpfAccumulator = TpfAccumulator(.5f) { tpf ->
+        val fps = (1 / tpf).toInt()
+        println("[${DateTime.now()}] running at $fps FPS")
+    }
+
+    override fun simpleInitApp() {
+        inputManager.isCursorVisible = true
+    }
+
+    override fun simpleUpdate(tpf: Float) {
+        tpfAccumulator.simpleUpdate(tpf)
+    }
+
+}
+```
+
+```
+[2020-11-28T12:29:18.940+01:00] running at 282 FPS
+[2020-11-28T12:29:20.939+01:00] running at 307 FPS
+[2020-11-28T12:29:22.937+01:00] running at 298 FPS
+[2020-11-28T12:29:24.936+01:00] running at 222 FPS
+[2020-11-28T12:29:26.937+01:00] running at 287 FPS
+[2020-11-28T12:29:28.938+01:00] running at 220 FPS
+``` 
 
 # Samples / Examples
 * Use Material and ColorRGBA:

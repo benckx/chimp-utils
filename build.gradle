@@ -40,6 +40,13 @@ subprojects {
 project(":chimp-utils-basics") {
     dependencies {
         compile 'joda-time:joda-time:2.10.6'
+
+        testCompile "org.jmonkeyengine:jme3-core:$jmeVersion"
+        testCompile "org.jmonkeyengine:jme3-desktop:$jmeVersion"
+        testCompile "org.jmonkeyengine:jme3-lwjgl:$jmeVersion"
+        testCompile "org.jmonkeyengine:jme3-blender:$jmeVersion"
+        testCompile "org.jmonkeyengine:jme3-plugins:$jmeVersion"
+        testCompile "org.jmonkeyengine:jme3-jogg:$jmeVersion"
     }
 }
 
