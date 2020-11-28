@@ -160,7 +160,7 @@ be used in your game logic module, without no requirement to link to any jme3 de
 # Related Project
 
 * A basic camera system for management game:<br/>
-https://github.com/benckx/ouistiti/tree/master/src/test/kotlin
+https://github.com/benckx/ouistiti
 
 If I manage to extract re-usable management game features from my game, I would move them to the `ouistiti` project,
 while more generic / engine-related components would be added here in the `chimp-utils` project.
