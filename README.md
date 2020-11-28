@@ -48,7 +48,7 @@ or with 255-based int values:
 
 ## Material
 
-Create an unshaded material:
+### Example: Unshaded Material
 
 ```kotlin
     override fun simpleInitApp() {
@@ -62,6 +62,37 @@ Create an unshaded material:
         val floor = Geometry("FLOOR", Box(10f, 10f, 10f))
         floor.material = floorMat
     }
+```
+
+### Example: Unshaded Material
+
+```kotlin
+class LightingMaterialDemoApp : SimpleApplication() {
+
+    override fun simpleInitApp() {
+        MaterialDefinitions.load(assetManager)
+        addLighting()
+
+        val material = LightingMaterial()
+        material.setColor(ORANGE)
+
+        val geometry = Geometry("SPHERE", Sphere(15, 15, 1f))
+        geometry.material = material
+        geometry.shadowMode = RenderQueue.ShadowMode.CastAndReceive
+
+        rootNode.attachChild(geometry)
+    }
+
+    override fun simpleUpdate(tpf: Float) {
+    }
+
+    private fun addLighting() {
+        val decorLight = DirectionalLight()
+        decorLight.direction = Vector3f(-1f, 1f, -2f).normalizeLocal()
+        decorLight.color = ColorRGBA.White
+        rootNode.addLight(decorLight)
+    }
+}
 ```
 
 ## Tpf Accumulator

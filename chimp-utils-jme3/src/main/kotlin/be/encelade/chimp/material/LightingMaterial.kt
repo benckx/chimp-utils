@@ -7,13 +7,25 @@ import com.jme3.texture.Texture
 class LightingMaterial : MaterialFacade(lightingDef) {
 
     override fun setColor(colorRGBA: ColorRGBA) {
+        setDiffuse(colorRGBA)
+        setAmbient(colorRGBA)
+        useMaterialColors(true)
+    }
+
+    fun setDiffuse(colorRGBA: ColorRGBA) {
         setColor("Diffuse", colorRGBA)
+    }
+
+    fun setAmbient(colorRGBA: ColorRGBA) {
         setColor("Ambient", colorRGBA)
-        setBoolean("UseMaterialColors", true)
     }
 
     fun setTexture(texture: Texture) {
         setTexture("DiffuseMap", texture)
-        setBoolean("UseMaterialColors", false)
+        useMaterialColors(false)
+    }
+
+    fun useMaterialColors(value: Boolean) {
+        setBoolean("UseMaterialColors", value)
     }
 }
