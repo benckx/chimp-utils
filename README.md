@@ -68,12 +68,14 @@ Create an unshaded material:
 
 The Tpf Accumulator is a mechanism to run actions (i.e. callback) periodically at a certain frequency (e.g. 2 Hz), 
 based on the accumulated tpf being received from the engine.
-<br/>It is designed for periodic actions that don't need to run as often as tpf updates (with can easily be in the 200 Hz range), 
+
+It is designed for periodic actions that don't need to run as often as tpf updates (with can easily be in the 200 Hz range), 
 in order to create timers-liked behavior within the main engine thread.
-<br/>It can be used for example for trigger refresh on the UI, update game state or implement cycle-based game entities 
+
+It can be used for example for trigger refresh on the UI, update game state or implement cycle-based game entities 
 (e.g. a machine that outputs a product every 1 sec. in a Factory-like game). 
 
-### Example: run something every 2 sec.:
+### Example: Run something every 2 seconds:
 
 ```kotlin
 class DemoSimpleApp : SimpleApplication() {
