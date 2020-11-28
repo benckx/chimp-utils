@@ -110,14 +110,9 @@ class DemoSimpleApp : SimpleApplication() {
         println("[${DateTime.now()}] running at $fps FPS")
     }
 
-    override fun simpleInitApp() {
-        inputManager.isCursorVisible = true
-    }
-
     override fun simpleUpdate(tpf: Float) {
         tpfAccumulator.simpleUpdate(tpf)
     }
-
 }
 ```
 
