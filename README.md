@@ -4,7 +4,7 @@
 
 # About
 
-A collection of Kotlin helpers for jMonkeyEngine3 that I made
+A collection of Kotlin API / helpers / facades for jMonkeyEngine3, that I developed
 while working on my game *Everybody Loves Bricks*: 
 
 * https://benckx.itch.io/elb
@@ -23,6 +23,19 @@ Create a `ColorRGBA` in hexadecimal:
     override fun simpleInitApp() {
         viewPort.backgroundColor = ColorRGBA("#1c3064")
     }
+```
+
+## Vector Operators
+
+```kotlin
+    import be.encelade.chimp.utils.VectorOperatorUtils.plus
+
+    // ...
+    val v1 = Vector3f(2f, 1f, 1f)
+    val v2 = Vector3f(4f, 4f, 4f)
+
+    // prints (6.0, 5.0, 5.0)
+    println(v1 + v2)
 ```
 
 ## Material
