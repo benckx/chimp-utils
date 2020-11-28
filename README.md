@@ -64,11 +64,9 @@ or with 255-based int values:
     }
 ```
 
-### Example: Unshaded Material
+### Example: Lighting Material
 
 ```kotlin
-class LightingMaterialDemoApp : SimpleApplication() {
-
     override fun simpleInitApp() {
         MaterialDefinitions.load(assetManager)
         addLighting()
@@ -83,16 +81,12 @@ class LightingMaterialDemoApp : SimpleApplication() {
         rootNode.attachChild(geometry)
     }
 
-    override fun simpleUpdate(tpf: Float) {
-    }
-
     private fun addLighting() {
         val decorLight = DirectionalLight()
         decorLight.direction = Vector3f(-1f, 1f, -2f).normalizeLocal()
         decorLight.color = ColorRGBA.White
         rootNode.addLight(decorLight)
     }
-}
 ```
 
 ## Tpf Accumulator
@@ -156,9 +150,9 @@ https://github.com/benckx/ouistiti/tree/master/src/test/kotlin
     }
 ```
 
-# Project structure:
-* `chimp-utils-basics` does not have any dependency to jme3. If you split the game logic from the rendering, i.e. if you 
-split your game into a "game logic" module (with no dependency to jme3) and an "engine render" module; then this library can
-be used in your game logic module without adding the dependency to jme3 
-* `chimp-utils-jme3` contains the API that depend on jme3
+# Project structure
 
+* `chimp-utils-basics` does not have any dependency to jme3. If you split your game logic from your rendering logic, i.e. if you 
+split your game into a "game logic" module (with no dependency to jme3) and a "engine render" module, then this library can
+be used in your game logic module, without no requirement to link to any jme3 dependencies.  
+* `chimp-utils-jme3` contains the APIs that depend on jme3
