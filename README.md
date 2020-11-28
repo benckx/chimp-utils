@@ -97,8 +97,8 @@ based on the accumulated tpf being received from the engine.
 It is designed for periodic actions that don't need to run as often as tpf updates (with can easily be in the 200 Hz range), 
 in order to create timers-liked behavior within the main engine thread.
 
-It can be used for example for trigger refresh on the UI, update game state or implement cycle-based game entities 
-(e.g. a machine that outputs a product every 1 sec. in a Factory-like game). 
+It can be used for example to trigger a refresh on the UI, update game state or implement cycle-based game entities 
+(e.g. a machine that outputs a product every 1 sec. in a Factorio-like game). 
 
 ### Example: Run something every 2 seconds:
 
@@ -156,3 +156,11 @@ https://github.com/benckx/ouistiti/tree/master/src/test/kotlin
 split your game into a "game logic" module (with no dependency to jme3) and a "engine render" module, then this library can
 be used in your game logic module, without no requirement to link to any jme3 dependencies.  
 * `chimp-utils-jme3` contains the APIs that depend on jme3
+
+# Related Project
+
+* A basic camera system for management game:<br/>
+https://github.com/benckx/ouistiti/tree/master/src/test/kotlin
+
+If I manage to extract re-usable management game features from my game, I would move them to the `ouistiti` project,
+while more generic / engine-related components would be added here in the `chimp-utils` project.
