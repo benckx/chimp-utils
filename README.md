@@ -124,3 +124,10 @@ https://github.com/benckx/ouistiti/tree/master/src/test/kotlin
         compile "com.github.benckx.chimp-utils:chimp-utils-jme3:$chimpUtilsVersion"
     }
 ```
+
+# Project structure:
+* `chimp-utils-basics` does not have any dependency to jme3. If you split the game logic from the rendering, i.e. if you 
+split your game into a "game logic" module (with no dependency to jme3) and an "engine render" module; then this library can
+be used in your game logic module without adding the dependency to jme3 
+* `chimp-utils-jme3` contains the API that depend on jme3
+
