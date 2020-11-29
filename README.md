@@ -62,7 +62,7 @@ This snippet (Kotlin):
 
 ```kotlin
     val material = LightingMaterial()
-    material.setColor(ColorRGBA.Orange, ColorRGBA.White)
+    material.setColors(ColorRGBA.Orange, ColorRGBA.White)
 ```
 
 is equivalent to the following in the jme3 API (Java):
