@@ -138,7 +138,7 @@ class SceneNode : Node("MY_SCENE") {
 The Tpf Accumulator is a mechanism to run actions (i.e. callback) periodically at a certain frequency (e.g. 2 Hz), 
 based on the accumulated tpf being received from the engine.
 
-It is designed for periodic actions that don't need to run as often as tpf updates (with can easily be in the 200 Hz range), 
+It is designed for periodic actions that don't need to run as often as tpf updates (that can easily be in the 200 Hz range), 
 in order to create timers-liked behavior within the main engine thread.
 
 It can be used for example to trigger a refresh of the UI, update the scene based on game state changes
