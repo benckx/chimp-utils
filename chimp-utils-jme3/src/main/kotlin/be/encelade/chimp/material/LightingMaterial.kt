@@ -4,11 +4,18 @@ import be.encelade.chimp.material.MaterialDefinitions.lightingDef
 import com.jme3.math.ColorRGBA
 import com.jme3.texture.Texture
 
+@Suppress("MemberVisibilityCanBePrivate", "unused")
 class LightingMaterial : MaterialFacade(lightingDef) {
 
     override fun setColor(colorRGBA: ColorRGBA) {
         setDiffuse(colorRGBA)
         setAmbient(colorRGBA)
+        useMaterialColors(true)
+    }
+
+    fun setColors(diffuse: ColorRGBA, specular: ColorRGBA) {
+        setDiffuse(diffuse)
+        setAmbient(specular)
         useMaterialColors(true)
     }
 

@@ -2,8 +2,8 @@ package be.encelade.chimp.material
 
 import com.jme3.app.SimpleApplication
 import com.jme3.light.DirectionalLight
-import com.jme3.math.ColorRGBA
 import com.jme3.math.ColorRGBA.Orange
+import com.jme3.math.ColorRGBA.White
 import com.jme3.math.Vector3f
 import com.jme3.renderer.queue.RenderQueue
 import com.jme3.scene.Geometry
@@ -28,7 +28,7 @@ class LightingMaterialDemoApp : SimpleApplication() {
         addLighting()
 
         val material = LightingMaterial()
-        material.setColor(Orange)
+        material.setColors(diffuse = Orange, specular = White)
 
         val geometry = Geometry("SPHERE", Sphere(15, 15, 1f))
         geometry.material = material
@@ -43,7 +43,7 @@ class LightingMaterialDemoApp : SimpleApplication() {
     private fun addLighting() {
         val decorLight = DirectionalLight()
         decorLight.direction = Vector3f(-1f, 1f, -2f).normalizeLocal()
-        decorLight.color = ColorRGBA.White
+        decorLight.color = White
         rootNode.addLight(decorLight)
     }
 

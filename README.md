@@ -58,19 +58,19 @@ Although Kotlin-based, it can be re-used from a Java only project.
     }
 ```
 
-These 2 lines:
+This snippet (Kotlin):
 
 ```kotlin
     val material = LightingMaterial()
-    material.setColor(ORANGE)
+    material.setColor(ColorRGBA.Orange, ColorRGBA.White)
 ```
 
-are equivalent to the following in the jme3 API:
+is equivalent to the following in the jme3 API (Java):
 ```java
     Material sphereMat = new Material(assetManager, "Common/MatDefs/Light/Lighting.j3md");
-    sphereMat.setBoolean("UseMaterialColors",true);
+    sphereMat.setBoolean("UseMaterialColors", true);
     sphereMat.setColor("Diffuse", ColorRGBA.Orange);
-    sphereMat.setColor("Specular", ColorRGBA.Orange);
+    sphereMat.setColor("Specular", ColorRGBA.White);
 ```
 
 ## ColorRGBA
