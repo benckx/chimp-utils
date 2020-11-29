@@ -181,7 +181,7 @@ https://github.com/benckx/ouistiti/tree/master/src/test/kotlin
     }
 
     // no required, but helps for consistency
-    def chimpUtilsVersion = "1.3"
+    def chimpUtilsVersion = "1.4"
     
     dependencies {
         compile "com.github.benckx.chimp-utils:chimp-utils-basics:$chimpUtilsVersion"
