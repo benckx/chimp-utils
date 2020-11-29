@@ -15,37 +15,6 @@ Although Kotlin-based, it can be re-used from a Java only project.
 
 # Features
 
-## ColorRGBA
-
-Create a `ColorRGBA` in hexadecimal:
-
-```kotlin
-    override fun simpleInitApp() {
-        viewPort.backgroundColor = ColorRGBA("#1c3064")
-    }
-```
-
-or with 255-based int values:
-
-```kotlin
-    override fun simpleInitApp() {
-        viewPort.backgroundColor = ColorRGBA(155, 164, 193)
-    }
-``` 
-
-## Vector Operators
-
-```kotlin
-    import be.encelade.chimp.utils.VectorOperatorUtils.plus
-
-    // ...
-    val v1 = Vector3f(2f, 1f, 1f)
-    val v2 = Vector3f(4f, 4f, 4f)
-
-    // prints (6.0, 5.0, 5.0)
-    println(v1 + v2)
-```
-
 ## Material
 
 ### Example: Unshaded Material
@@ -87,6 +56,66 @@ or with 255-based int values:
         decorLight.color = ColorRGBA.White
         rootNode.addLight(decorLight)
     }
+```
+
+## ColorRGBA
+
+Create a `ColorRGBA` in hexadecimal:
+
+```kotlin
+    override fun simpleInitApp() {
+        viewPort.backgroundColor = ColorRGBA("#1c3064")
+    }
+```
+
+or with 255-based int values:
+
+```kotlin
+    override fun simpleInitApp() {
+        viewPort.backgroundColor = ColorRGBA(155, 164, 193)
+    }
+``` 
+
+## Node
+
+Varargs and collections:
+```kotlin
+import be.encelade.chimp.utils.NodeHelperUtils.attachChildren
+import com.jme3.scene.Geometry
+import com.jme3.scene.Node
+
+class SceneNode : Node("MY_SCENE") {
+
+    init {
+        attachChildren(makeFloor(), makeGrid())
+    }
+
+    private companion object {
+
+        fun makeFloor(): Geometry {
+            // ..
+        }
+
+        fun makeGrid(): Geometry {
+            // ...
+        }
+
+    }
+}
+
+```
+
+## Vector Operators
+
+```kotlin
+    import be.encelade.chimp.utils.VectorOperatorUtils.plus
+
+    // ...
+    val v1 = Vector3f(2f, 1f, 1f)
+    val v2 = Vector3f(4f, 4f, 4f)
+
+    // prints (6.0, 5.0, 5.0)
+    println(v1 + v2)
 ```
 
 ## Tpf Accumulator
