@@ -41,7 +41,7 @@ Although Kotlin-based, it can be re-used from a Java only project.
         addLighting()
 
         val material = LightingMaterial()
-        material.setColor(ORANGE)
+        material.setColor(Orange)
 
         val geometry = Geometry("SPHERE", Sphere(15, 15, 1f))
         geometry.material = material
@@ -56,6 +56,21 @@ Although Kotlin-based, it can be re-used from a Java only project.
         decorLight.color = ColorRGBA.White
         rootNode.addLight(decorLight)
     }
+```
+
+These 2 lines:
+
+```kotlin
+    val material = LightingMaterial()
+    material.setColor(ORANGE)
+```
+
+are equivalent to the following in the jme3 API:
+```java
+    Material sphereMat = new Material(assetManager, "Common/MatDefs/Light/Lighting.j3md");
+    sphereMat.setBoolean("UseMaterialColors",true);
+    sphereMat.setColor("Diffuse", ColorRGBA.Orange);
+    sphereMat.setColor("Specular", ColorRGBA.Orange);
 ```
 
 ## ColorRGBA
