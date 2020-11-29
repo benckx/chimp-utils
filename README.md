@@ -67,10 +67,10 @@ This snippet (Kotlin):
 
 is equivalent to the following in the jme3 API (Java):
 ```java
-    Material sphereMat = new Material(assetManager, "Common/MatDefs/Light/Lighting.j3md");
-    sphereMat.setBoolean("UseMaterialColors", true);
-    sphereMat.setColor("Diffuse", ColorRGBA.Orange);
-    sphereMat.setColor("Specular", ColorRGBA.White);
+    Material material = new Material(assetManager, "Common/MatDefs/Light/Lighting.j3md");
+    material.setBoolean("UseMaterialColors", true);
+    material.setColor("Diffuse", ColorRGBA.Orange);
+    material.setColor("Specular", ColorRGBA.White);
 ```
 
 ## ColorRGBA
