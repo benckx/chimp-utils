@@ -8,6 +8,7 @@ import org.joda.time.Period
  * <br/>Designed for periodic actions that don't need to run as often as tpf updates.
  * <br/>Can be use to program timers scheduled within the same thread as the main game thread.
  */
+@Suppress("MemberVisibilityCanBePrivate", "unused")
 class TpfAccumulator(frequencyHz: Float, private val oneShot: Boolean = false, val callback: (Float) -> Unit) : TpfReceiver {
 
     constructor(period: Period, oneShot: Boolean = false, callback: (Float) -> Unit) : this(1f / period.toStandardSeconds().seconds.toFloat(), oneShot, callback)
