@@ -93,7 +93,7 @@ or with 255-based int values:
 
 ## Node
 
-Varargs and collections:
+Add multiple `Spatial` children, as varargs or collections:
 ```kotlin
 import be.encelade.chimp.utils.NodeHelperUtils.attachChildren
 import com.jme3.scene.Geometry
