@@ -12,7 +12,7 @@ repositories {
 def jmeVersion = "3.3.2-stable"
 
 allprojects {
-    version = "1.6"
+    version = "1.6.1"
 }
 
 subprojects {
