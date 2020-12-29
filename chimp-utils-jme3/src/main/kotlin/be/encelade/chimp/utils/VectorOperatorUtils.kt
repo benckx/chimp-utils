@@ -15,9 +15,9 @@ object VectorOperatorUtils {
     operator fun Vector3f.plus(other: Vector2f): Vector3f = this.add(Vector3f(other.x, other.y, 0f))
 
     // minus
-    operator fun Vector2f.minus(other: Vector2f): Vector2f = this.minus(other)
-    operator fun Vector3f.minus(other: Vector3f): Vector3f = this.minus(other)
-    operator fun Vector4f.minus(other: Vector4f): Vector4f = this.minus(other)
+    operator fun Vector2f.minus(other: Vector2f): Vector2f = this.subtract(other)
+    operator fun Vector3f.minus(other: Vector3f): Vector3f = this.subtract(other)
+    operator fun Vector4f.minus(other: Vector4f): Vector4f = this.subtract(other)
 
     // multiplication
     operator fun Vector3f.times(other: Vector3f): Vector3f = this.mult(other)
