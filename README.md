@@ -180,7 +180,7 @@ https://github.com/benckx/ouistiti/tree/master/src/test/kotlin
         maven { url "https://jitpack.io" }
     }
 
-    def chimpUtilsVersion = "1.4"
+    def chimpUtilsVersion = "1.5"
     
     dependencies {
         compile "com.github.benckx.chimp-utils:chimp-utils-basics:$chimpUtilsVersion"
