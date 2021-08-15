@@ -27,4 +27,5 @@ abstract class MaterialFacade(def: MaterialDef) : Material(def) {
     fun makeTransparent() {
         additionalRenderState.blendMode = RenderState.BlendMode.Alpha
     }
+
 }

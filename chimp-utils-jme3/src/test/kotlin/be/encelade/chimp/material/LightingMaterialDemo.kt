@@ -24,6 +24,8 @@ fun main() {
 class LightingMaterialDemoApp : SimpleApplication() {
 
     override fun simpleInitApp() {
+        inputManager.isCursorVisible = true
+
         MaterialDefinitions.load(assetManager)
         addLighting()
 

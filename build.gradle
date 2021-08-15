@@ -1,18 +1,17 @@
 plugins {
-    id "com.github.ben-manes.versions" version "0.36.0"
+    id "com.github.ben-manes.versions" version "0.39.0"
     id "org.jetbrains.kotlin.jvm" version "$kotlinVersion"
 }
 
 repositories {
     google()
     mavenCentral()
-    jcenter()
 }
 
-def jmeVersion = "3.3.2-stable"
+def jmeVersion = "3.4.0-stable"
 
 allprojects {
-    version = "1.6.1"
+    version = "1.7"
 }
 
 subprojects {
@@ -23,8 +22,8 @@ subprojects {
     targetCompatibility = 1.8
 
     repositories {
+        google()
         mavenCentral()
-        jcenter()
     }
 
     dependencies {
@@ -33,19 +32,17 @@ subprojects {
 
         testCompile "org.jmonkeyengine:jme3-core:$jmeVersion"
         testCompile "org.jmonkeyengine:jme3-desktop:$jmeVersion"
-        testCompile "org.jmonkeyengine:jme3-lwjgl:$jmeVersion"
-        testCompile "org.jmonkeyengine:jme3-blender:$jmeVersion"
+        testCompile "org.jmonkeyengine:jme3-lwjgl3:$jmeVersion"
         testCompile "org.jmonkeyengine:jme3-plugins:$jmeVersion"
         testCompile "org.jmonkeyengine:jme3-jogg:$jmeVersion"
 
-        testCompile 'junit:junit:4.13'
+        testCompile 'junit:junit:4.13.2'
     }
-
 }
 
 project(":chimp-utils-basics") {
     dependencies {
-        compile 'joda-time:joda-time:2.10.6'
+        compile "joda-time:joda-time:2.10.10"
     }
 }
 
