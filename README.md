@@ -197,8 +197,9 @@ be used in your game logic module, without the requirement to link to any jme3 l
 
 # Related Project
 
-* A basic camera system for management game:<br/>
-https://github.com/benckx/ouistiti
-
-If I manage to extract re-usable management game features from my game, I would move them to the `ouistiti` project,
-while more generic / engine-related components would be added here in the `chimp-utils` project.
+* **ouistiti**: A basic camera manager for management/strategy games:<br/>
+  https://github.com/benckx/ouistiti
+* **chimp-utils**: A collection of Kotlin APIs and helpers for jMonkeyEngine:<br/>
+  https://github.com/benckx/chimp-utils
+* **jme-asset-viewer**: Minimalist GUI to preview/test 3D assets in a jMonkeyEngine scene:<br/>
+  https://github.com/benckx/jme-asset-viewer
