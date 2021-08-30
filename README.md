@@ -195,7 +195,7 @@ split your game into a "game logic" module (with no dependency to jme3) and a "e
 be used in your game logic module, without the requirement to link to any jme3 library.  
 * `chimp-utils-jme3` contains the APIs that depend on jme3 (only `jme3-core`).
 
-# Related Project
+# Related Projects
 
 * **ouistiti**: A basic camera manager for management/strategy games:<br/>
   https://github.com/benckx/ouistiti
