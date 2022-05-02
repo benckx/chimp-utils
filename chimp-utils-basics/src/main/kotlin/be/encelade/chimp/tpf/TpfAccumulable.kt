@@ -7,4 +7,5 @@ interface TpfAccumulable : TpfReceiver {
     override fun simpleUpdate(tpf: Float) {
         tpfAccumulator.simpleUpdate(tpf)
     }
+
 }

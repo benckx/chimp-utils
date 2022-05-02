@@ -16,4 +16,5 @@ object MaterialDefinitions {
         lightingDef = assetManager.loadAsset<Any?>(AssetKey(Materials.LIGHTING)) as MaterialDef
         pbrDef = assetManager.loadAsset<Any?>(AssetKey(Materials.PBR)) as MaterialDef
     }
+
 }
