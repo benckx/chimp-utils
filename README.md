@@ -180,7 +180,7 @@ https://github.com/benckx/ouistiti/tree/master/src/test/kotlin
         maven { url "https://jitpack.io" }
     }
 
-    def chimpUtilsVersion = "1.7"
+    def chimpUtilsVersion = "1.7.0"
     
     dependencies {
         compile "com.github.benckx.chimp-utils:chimp-utils-basics:$chimpUtilsVersion"
@@ -197,15 +197,17 @@ be used in your game logic module, without the requirement to link to any jme3 l
 
 # Change log
 
-## Version 1.7
+## Version 1.7.0
 
+* Upgrade Kotlin from `1.5.21` to `1.6.21`
 * Upgrade [LWJGL](https://www.lwjgl.org/) from `2.9.3` to `3.3.1`
 * Upgrade [jMonkeyEngine3](https://jmonkeyengine.org/) from `3.3.2-stable` to `3.5.2-stable`
 
-# Related Project
+# Related Projects
 
-* A basic camera system for management game:<br/>
-https://github.com/benckx/ouistiti
-
-If I manage to extract re-usable management game features from my game, I would move them to the `ouistiti` project,
-while more generic / engine-related components would be added here in the `chimp-utils` project.
+* **ouistiti**: A basic camera manager for management/strategy games:<br/>
+  https://github.com/benckx/ouistiti
+* **chimp-utils**: A collection of Kotlin APIs and helpers for jMonkeyEngine:<br/>
+  https://github.com/benckx/chimp-utils
+* **jme-asset-viewer**: Minimalist GUI to preview/test 3D assets in a jMonkeyEngine scene:<br/>
+  https://github.com/benckx/jme-asset-viewer
