@@ -195,6 +195,13 @@ split your game into a "game logic" module (with no dependency to jme3) and a "e
 be used in your game logic module, without the requirement to link to any jme3 library.  
 * `chimp-utils-jme3` contains the APIs that depend on jme3 (only `jme3-core`).
 
+# Change log
+
+## Version 1.7
+
+* Upgrade [LWJGL](https://www.lwjgl.org/) from `2.9.3` to `3.3.1`
+* Upgrade [jMonkeyEngine3](https://jmonkeyengine.org/) from `3.3.2-stable` to `3.5.2-stable`
+
 # Related Project
 
 * A basic camera system for management game:<br/>
