@@ -202,6 +202,7 @@ be used in your game logic module, without the requirement to link to any jme3 l
 * Upgrade Kotlin from `1.5.21` to `1.6.21`
 * Upgrade [LWJGL](https://www.lwjgl.org/) from `2.9.3` to `3.3.1`
 * Upgrade [jMonkeyEngine3](https://jmonkeyengine.org/) from `3.3.2-stable` to `3.5.2-stable`
+* Remove dependency to Joda Time
 
 # Related Projects
 

@@ -2,7 +2,7 @@ package be.encelade.chimp.tpf
 
 import com.jme3.app.SimpleApplication
 import com.jme3.system.AppSettings
-import org.joda.time.DateTime
+import java.time.Instant
 
 fun main() {
     val settings = AppSettings(true)
@@ -20,7 +20,7 @@ class DemoSimpleApp : SimpleApplication() {
 
     private val tpfAccumulator = TpfAccumulator(.5f) { tpf ->
         val fps = (1 / tpf).toInt()
-        println("[${DateTime.now()}] running at $fps FPS")
+        println("[${Instant.now()}] running at $fps FPS")
     }
 
     override fun simpleInitApp() {
