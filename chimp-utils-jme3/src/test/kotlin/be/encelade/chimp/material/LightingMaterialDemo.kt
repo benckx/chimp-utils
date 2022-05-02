@@ -25,6 +25,7 @@ class LightingMaterialDemoApp : SimpleApplication() {
 
     override fun simpleInitApp() {
         inputManager.isCursorVisible = true
+        flyByCamera.isEnabled = false
 
         MaterialDefinitions.load(assetManager)
         addLighting()

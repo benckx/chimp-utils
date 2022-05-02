@@ -25,6 +25,7 @@ class DemoSimpleApp : SimpleApplication() {
 
     override fun simpleInitApp() {
         inputManager.isCursorVisible = true
+        flyByCamera.isEnabled = false
     }
 
     override fun simpleUpdate(tpf: Float) {
