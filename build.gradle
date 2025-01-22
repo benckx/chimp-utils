@@ -8,7 +8,7 @@ repositories {
     mavenCentral()
 }
 
-def jmeVersion = "3.5.2-stable"
+def jmeVersion = "3.7.0-stable"
 
 allprojects {
     version = "1.7.0"

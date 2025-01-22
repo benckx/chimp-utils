@@ -1,5 +1,6 @@
 package be.encelade.chimp.utils
 
+import be.encelade.chimp.utils.VectorOperatorUtils.plus
 import com.jme3.math.Vector2f
 import com.jme3.math.Vector3f
 import com.jme3.math.Vector4f
@@ -33,4 +34,10 @@ object VectorOperatorUtils {
     operator fun Vector3f.div(scalar: Float): Vector3f = this.divide(scalar)
     operator fun Vector4f.div(scalar: Float): Vector4f = this.divide(scalar)
 
+}
+
+fun main() {
+    val v1 = Vector3f(1f, 1f, 1f)
+    val v2 = Vector3f(2f, 2f, 2f)
+    println(v1 + v2) // (3.0, 3.0, 3.0)
 }
