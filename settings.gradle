@@ -1,4 +1,0 @@
-rootProject.name = 'chimp-utils'
-
-include('chimp-utils-basics')
-include('chimp-utils-jme3')

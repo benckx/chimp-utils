@@ -1,6 +1,4 @@
-<a href="https://paypal.me/benckx/2">
-<img src="https://img.shields.io/badge/Donate-PayPal-green.svg"/>
-</a>
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/benckx/2) [![Build](https://github.com/benckx/chimp-utils/actions/workflows/build.yml/badge.svg)](https://github.com/benckx/chimp-utils/actions/workflows/build.yml) [![](https://www.jitpack.io/v/benckx/chimp-utils.svg)](https://www.jitpack.io/#benckx/chimp-utils)
 
 # About
 
@@ -180,11 +178,11 @@ https://github.com/benckx/ouistiti/tree/master/src/test/kotlin
         maven { url "https://jitpack.io" }
     }
 
-    def chimpUtilsVersion = "1.7.0"
+    def chimpUtilsVersion = "1.8.0"
     
     dependencies {
-        compile "com.github.benckx.chimp-utils:chimp-utils-basics:$chimpUtilsVersion"
-        compile "com.github.benckx.chimp-utils:chimp-utils-jme3:$chimpUtilsVersion"
+        implementation "com.github.benckx.chimp-utils:chimp-utils-basics:$chimpUtilsVersion"
+        implementation "com.github.benckx.chimp-utils:chimp-utils-jme3:$chimpUtilsVersion"
     }
 ```
 
@@ -196,6 +194,14 @@ be used in your game logic module, without the requirement to link to any jme3 l
 * `chimp-utils-jme3` contains the APIs that depend on jme3 (only `jme3-core`).
 
 # Change log
+
+## Version 1.8.0
+
+* Upgrade Kotlin from `1.6.21` to `2.4.20`
+* Upgrade [jMonkeyEngine3](https://jmonkeyengine.org/) from `3.5.2-stable` to `3.9.0-stable`
+* Upgrade Gradle from `6.5` to `9.7.1`
+* Migrate build to Gradle Kotlin DSL with a version catalog
+* Update build tooling and GitHub Actions dependencies
 
 ## Version 1.7.0
 

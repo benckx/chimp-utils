@@ -1,0 +1,19 @@
+[versions]
+kotlin = "2.4.20"
+benManesVersions = "0.64.0"
+jme = "3.9.0-stable"
+junit = "4.13.2"
+
+[libraries]
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+jme-core = { module = "org.jmonkeyengine:jme3-core", version.ref = "jme" }
+jme-desktop = { module = "org.jmonkeyengine:jme3-desktop", version.ref = "jme" }
+jme-lwjgl3 = { module = "org.jmonkeyengine:jme3-lwjgl3", version.ref = "jme" }
+jme-plugins = { module = "org.jmonkeyengine:jme3-plugins", version.ref = "jme" }
+jme-jogg = { module = "org.jmonkeyengine:jme3-jogg", version.ref = "jme" }
+junit = { module = "junit:junit", version.ref = "junit" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+versions = { id = "com.github.ben-manes.versions", version.ref = "benManesVersions" }
