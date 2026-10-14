@@ -39,7 +39,7 @@ Although Kotlin-based, it can be re-used from a Java only project.
         addLighting()
 
         val material = LightingMaterial()
-        material.setColor(Orange) // same value for 'Diffuse' and 'Specular'
+        material.setColor(Orange) // same value for 'Diffuse' and 'Ambient'
 
         val geometry = Geometry("SPHERE", Sphere(15, 15, 1f))
         geometry.material = material

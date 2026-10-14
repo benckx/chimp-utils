@@ -10,7 +10,7 @@ import java.time.Duration
 class TpfAccumulator(frequencyHz: Float, private val oneShot: Boolean = false, val callback: (Float) -> Unit) : TpfReceiver {
 
     constructor(duration: Duration, oneShot: Boolean = true, callback: (Float) -> Unit) :
-            this(1f / duration.seconds, oneShot, callback)
+            this(1f / (duration.seconds.toFloat() + duration.nano / 1_000_000_000f), oneShot, callback)
 
     val cycleDurationInSeconds: Float = 1 / frequencyHz
 

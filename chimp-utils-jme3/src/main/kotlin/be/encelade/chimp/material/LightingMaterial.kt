@@ -14,7 +14,7 @@ class LightingMaterial : MaterialFacade(lightingDef) {
 
     fun setColors(diffuse: ColorRGBA, specular: ColorRGBA) {
         setDiffuse(diffuse)
-        setAmbient(specular)
+        setColor("Specular", specular)
         useMaterialColors(true)
     }
 
