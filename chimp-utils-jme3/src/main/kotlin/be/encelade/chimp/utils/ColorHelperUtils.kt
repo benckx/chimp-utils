@@ -9,7 +9,7 @@ import java.awt.Color as AwtColor
 
 object ColorHelperUtils {
 
-    fun ColorRGBA(r: Int, g: Int, b: Int, a: Int = 1): ColorRGBA {
+    fun ColorRGBA(r: Int, g: Int, b: Int, a: Int = 255): ColorRGBA {
         return ColorRGBA(r / 255f, g / 255f, b / 255f, a / 255f)
     }
 
@@ -21,7 +21,7 @@ object ColorHelperUtils {
         return ColorRGBA(color.red, color.green, color.blue, color.alpha)
     }
 
-    fun ColorRGBA(greyLevel: Int, a: Int = 1): ColorRGBA {
+    fun ColorRGBA(greyLevel: Int, a: Int = 255): ColorRGBA {
         return ColorRGBA(greyLevel, greyLevel, greyLevel, a)
     }
 
