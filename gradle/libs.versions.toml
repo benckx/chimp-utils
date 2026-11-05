@@ -16,4 +16,4 @@ junit = { module = "junit:junit", version.ref = "junit" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-versions = { id = "com.github.ben-manes.versions", version.ref = "benManesVersions" }
+versions = { id = "io.github.ben-manes.versions", version.ref = "benManesVersions" }
